@@ -1,0 +1,39 @@
+@import "fonts"
+%il-b
+  display: inline-block
+  margin: 0 auto
+.first-item
+  @extend %il-b
+  background: linear-gradient(45deg,red 0%,blue 50%,green 100%)
+.second-item
+  @extend %il-b
+
+body
+  background: wheat
+  font-size: 1.4em
+  color: black
+  text-align: justify
+header
+  margin:
+    top: 2px
+    bottom: 3px
+  width: 80%
+  margin: 0 auto
+  transition-duration: 0.2s
+  text-align: justify
+  &:hover
+    width: 90%
+    -ms-filter: blur(0)
+    -webkit-filter: blur(0)
+  .logo
+    background-color: aqua
+    a
+      text-decoration: none
+      &:hover
+        color: red
+    ul
+      list-style-type: none
+
+
+
+

@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "roboto-example";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot");
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "roboto-example";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/RobotoBold/RobotoBold.eot");
+  src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
+}
+
+.first-item, .second-item {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.first-item {
+  background: linear-gradient(45deg, red 0%, blue 50%, green 100%);
+}
+
+body {
+  background: wheat;
+  font-size: 1.4em;
+  color: black;
+  text-align: justify;
+}
+
+header {
+  margin-top: 2px;
+  margin-bottom: 3px;
+  width: 80%;
+  margin: 0 auto;
+  transition-duration: 0.2s;
+  text-align: justify;
+}
+
+header:hover {
+  width: 90%;
+  -ms-filter: blur(0);
+  -webkit-filter: blur(0);
+}
+
+header .logo {
+  background-color: aqua;
+}
+
+header .logo a {
+  text-decoration: none;
+}
+
+header .logo a:hover {
+  color: red;
+}
+
+header .logo ul {
+  list-style-type: none;
+}

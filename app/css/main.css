@@ -1,62 +1,214 @@
 @font-face {
-  font-family: "roboto-example";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot");
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "roboto-example";
+  font-family: "caviar_dreams";
   font-weight: bold;
   font-style: normal;
-  src: url("../fonts/RobotoBold/RobotoBold.eot");
-  src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
+  src: url("../fonts/caviar_dreams/caviar_dreams_bold.eot");
+  src: url("../fonts/caviar_dreams/caviar_dreams_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/caviar_dreams/caviar_dreams_bold.woff") format("woff"), url("../fonts/caviar_dreams/caviar_dreams_bold.ttf") format("truetype");
 }
 
-.first-item, .second-item {
-  display: inline-block;
-  margin: 0 auto;
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "caviar_dreams", sans-serif;
 }
 
-.first-item {
-  background: linear-gradient(45deg, red 0%, blue 50%, green 100%);
+html {
+  height: 100%;
 }
 
 body {
-  background: wheat;
-  font-size: 1.4em;
-  color: black;
-  text-align: justify;
+  height: 100%;
+  -webkit-transition: padding-right .5s;
+  -o-transition: padding-right .5s;
+  transition: padding-right .5s;
+  background-color: #EFEBE0;
 }
 
 header {
-  margin-top: 2px;
-  margin-bottom: 3px;
-  width: 80%;
-  margin: 0 auto;
-  transition-duration: 0.2s;
-  text-align: justify;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
 }
 
-header:hover {
-  width: 90%;
-  -ms-filter: blur(0);
-  -webkit-filter: blur(0);
+header .upper-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 75px;
+  width: 100%;
+  background-color: #2E2833;
+  -webkit-transition: padding-right .5s;
+  -o-transition: padding-right .5s;
+  transition: padding-right .5s;
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
 }
 
-header .logo {
-  background-color: aqua;
-}
-
-header .logo a {
+header .upper-links a {
   text-decoration: none;
 }
 
-header .logo a:hover {
-  color: red;
+header .upper-links .container .fa-stack {
+  font-size: 1.3em;
 }
 
-header .logo ul {
-  list-style-type: none;
+header .upper-links .container .fa-stack:active {
+  -webkit-transform: translateY(2px);
+      -ms-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+header .upper-links .container .fa-stack .fas {
+  color: #FFFFFF;
+}
+
+header .upper-links .container .fa-stack .fab {
+  color: #000;
+  font-size: 1.2em;
+}
+
+header .upper-links .container .fa-stack .fab:hover {
+  color: #C96E4D;
+}
+
+header h1 {
+  text-align: center;
+  margin-top: 100px;
+}
+
+header h2 {
+  text-align: justify;
+  margin-top: 20px;
+}
+
+header nav {
+  position: fixed;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+header nav .overlay {
+  display: none;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.8;
+}
+
+header nav .burger {
+  z-index: 105;
+  position: fixed;
+  top: 17px;
+  right: 15px;
+  cursor: pointer;
+  opacity: .4;
+  -webkit-transition: opacity, margin-right .5s;
+  -o-transition: opacity, margin-right .5s;
+  transition: opacity, margin-right .5s;
+  width: 40px;
+  height: 40px;
+  background-color: #C96E4D;
+  border-radius: 30%;
+}
+
+header nav .burger:hover {
+  opacity: 1;
+}
+
+header nav .burger span, header nav .burger span:before, header nav .burger span:after {
+  position: absolute;
+  border-radius: 50px;
+  display: block;
+  width: 26px;
+  height: 3px;
+  background-color: #fff;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  -o-transition: transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+header nav .burger span:before {
+  content: "";
+  -webkit-transform: translateY(-7px);
+      -ms-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+header nav .burger span:after {
+  content: "";
+  -webkit-transform: translateY(7px);
+      -ms-transform: translateY(7px);
+          transform: translateY(7px);
+}
+
+header nav .burger.burgerActive span:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+header nav .burger.burgerActive span:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+header nav .burger.burgerActive span {
+  height: 0;
+}
+
+header nav #mySidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 105;
+  top: 0;
+  right: 0;
+  background-color: #2E2833;
+  overflow-x: hidden;
+  -webkit-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
+  padding-top: 50px;
+}
+
+header nav #mySidenav a {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  width: 350px;
+  height: 50px;
+  color: #C96E4D;
+  font-size: 25px;
+  padding-top: 7px;
+  -webkit-transition: background-color, color .2s;
+  -o-transition: background-color, color .2s;
+  transition: background-color, color .2s;
+}
+
+header nav #mySidenav a:hover {
+  background-color: #C96E4D;
+  color: #000;
 }

@@ -2,7 +2,8 @@ $(document).ready(function () {
 
 //rightMenu
     var sideNav = $('#mySidenav');
-    $('.burger').click(function () {
+    var burger = $('.burger');
+    burger.click(function () {
         $(this).toggleClass('burgerActive');
         if (sideNav[0].style.width !== "350px") {
             $('.overlay').fadeIn(500);
@@ -10,7 +11,7 @@ $(document).ready(function () {
             $('body, .upper-links').not('#mySidenav').css({
                 'paddingRight': "350px",
             });
-            $('.burger')[0].style.marginRight = "350px";
+            burger[0].style.marginRight = "350px";
         } else {
             $('.overlay').fadeOut(500);
             sideNav[0].style.width = "0";
@@ -26,9 +27,25 @@ $(document).ready(function () {
         $('body, .upper-links').not('#mySidenav').css({
             'paddingRight': "0",
         });
-        $('.burger')[0].style.marginRight = "0";
-        $('.burger').toggleClass('burgerActive');
-    })
+        burger[0].style.marginRight = "0";
+        burger.toggleClass('burgerActive');
+    });
 
+//owl-carousel
+        $(".owl-carousel").owlCarousel({
+            items:2,
+            center: true,
+            loop:true,
+            margin:50,
+            nav:true,
+            autoplay:true,
+            autoplayTimeout:2500,
+            autoplayHoverPause:true,
+            responsive:{
+                600:{
+                    items:2
+                }
+            }
+        });
 });
 

@@ -6,6 +6,14 @@
   src: url("../fonts/caviar_dreams/caviar_dreams_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/caviar_dreams/caviar_dreams_bold.woff") format("woff"), url("../fonts/caviar_dreams/caviar_dreams_bold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "caviar_dreams";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/caviar_dreams/caviar_dreams.eot");
+  src: url("../fonts/caviar_dreams/caviar_dreams.eot?#iefix") format("embedded-opentype"), url("../fonts/caviar_dreams/caviar_dreams.woff") format("woff"), url("../fonts/caviar_dreams/caviar_dreams.ttf") format("truetype");
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -85,6 +93,7 @@ header .upper-links .container .fa-stack .fab:hover {
 header h1 {
   text-align: center;
   margin-top: 100px;
+  font-weight: bold;
 }
 
 header h2 {
@@ -211,4 +220,48 @@ header nav #mySidenav a {
 header nav #mySidenav a:hover {
   background-color: #C96E4D;
   color: #000;
+}
+
+main.container-fluid {
+  height: 100%;
+  width: 100%;
+  background-color: #2E2833;
+  padding-top: 60px;
+  padding-left: 0;
+  padding-right: 0;
+  color: #EFEBE0;
+  overflow-x: hidden;
+}
+
+main.container-fluid h2 {
+  text-align: center;
+}
+
+main.container-fluid .carousel {
+  margin-top: 70px;
+}
+
+main.container-fluid .carousel .center {
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  -webkit-transform: scale(1.06);
+      -ms-transform: scale(1.06);
+          transform: scale(1.06);
+}
+
+main.container-fluid .carousel div.item {
+  background-position: center center;
+  background-size: cover;
+  height: 550px;
+  -webkit-box-shadow: 0 0 10px 2px #000;
+          box-shadow: 0 0 10px 2px #000;
+  cursor: -webkit-grab;
+  cursor: grab;
+  border-radius: 4px;
+}
+
+main.container-fluid .carousel .owl-nav {
+  font-size: 30px;
+  padding: 0 0;
 }

@@ -238,7 +238,7 @@ main.container-fluid h2 {
 }
 
 main.container-fluid .carousel {
-  margin-top: 70px;
+  margin-top: 60px;
 }
 
 main.container-fluid .carousel .center {
@@ -262,6 +262,5 @@ main.container-fluid .carousel div.item {
 }
 
 main.container-fluid .carousel .owl-nav {
-  font-size: 30px;
-  padding: 0 0;
+  font-size: 40px;
 }

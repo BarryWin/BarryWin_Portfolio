@@ -13,6 +13,7 @@ $(document).ready(function () {
             });
             $('.triangle1')[0].style.width = 'calc(100% - 350px)';
             burger[0].style.marginRight = "350px";
+            $('.arrow')[0].style.left = 'calc(50% - 175px)';
         } else {
             $('.overlay').fadeOut(500);
             sideNav[0].style.width = "0";
@@ -21,6 +22,7 @@ $(document).ready(function () {
             });
             $('.burger')[0].style.marginRight = "0";
             $('.triangle1')[0].style.width = '100%';
+            $('.arrow')[0].style.left = '50%';
         }
     });
     $('.overlay').click(function () {
@@ -32,6 +34,7 @@ $(document).ready(function () {
         burger[0].style.marginRight = "0";
         burger.toggleClass('burgerActive');
         $('.triangle1')[0].style.width = '100%';
+        $('.arrow')[0].style.left = '50%';
     });
 
 //owl-carousel

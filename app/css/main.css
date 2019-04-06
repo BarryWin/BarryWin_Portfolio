@@ -237,6 +237,28 @@ header .triangle1 {
   transition: width .5s;
 }
 
+header a.arrow {
+  display: block;
+  position: absolute;
+  top: calc(100% - 120px);
+  border-radius: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  cursor: pointer;
+  padding: 17.5px;
+  background-color: #2E2833;
+  -webkit-transition: left .5s;
+  -o-transition: left .5s;
+  transition: left .5s;
+}
+
+header a.arrow i {
+  font-size: 55px;
+  color: #EFEBE0;
+}
+
 main.container-fluid {
   padding-left: 0;
   padding-right: 0;
@@ -252,7 +274,7 @@ main.container-fluid #carousel {
   background-color: #2E2833;
   padding-top: 60px;
   padding-bottom: 46px;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 

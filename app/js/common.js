@@ -11,6 +11,7 @@ $(document).ready(function () {
             $('body, .upper-links').not('#mySidenav').css({
                 'paddingRight': "350px",
             });
+            $('.triangle1')[0].style.width = 'calc(100% - 350px)';
             burger[0].style.marginRight = "350px";
         } else {
             $('.overlay').fadeOut(500);
@@ -19,6 +20,7 @@ $(document).ready(function () {
                 'paddingRight': "0",
             });
             $('.burger')[0].style.marginRight = "0";
+            $('.triangle1')[0].style.width = '100%';
         }
     });
     $('.overlay').click(function () {
@@ -29,6 +31,7 @@ $(document).ready(function () {
         });
         burger[0].style.marginRight = "0";
         burger.toggleClass('burgerActive');
+        $('.triangle1')[0].style.width = '100%';
     });
 
 //owl-carousel
@@ -36,7 +39,7 @@ $(document).ready(function () {
             items:2,
             center: true,
             loop:true,
-            margin:50,
+            margin:60,
             nav:true,
             autoplay:true,
             autoplayTimeout:2500,
@@ -47,5 +50,8 @@ $(document).ready(function () {
                 }
             }
         });
+
+
+
 });
 

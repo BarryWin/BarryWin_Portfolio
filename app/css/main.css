@@ -222,11 +222,22 @@ header nav #mySidenav a:hover {
   color: #000;
 }
 
-main.container-fluid {
+header .triangle1 {
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
-  background-color: #2E2833;
-  padding-top: 60px;
+  background-image: url("../img/background.png");
+  background-size: cover;
+  background-position: center bottom;
+  -webkit-transition: width .5s;
+  -o-transition: width .5s;
+  transition: width .5s;
+}
+
+main.container-fluid {
   padding-left: 0;
   padding-right: 0;
   color: #EFEBE0;
@@ -237,11 +248,19 @@ main.container-fluid h2 {
   text-align: center;
 }
 
-main.container-fluid .carousel {
-  margin-top: 60px;
+main.container-fluid #carousel {
+  background-color: #2E2833;
+  padding-top: 60px;
+  padding-bottom: 46px;
+  height: 100vh;
+  width: 100%;
 }
 
-main.container-fluid .carousel .center {
+main.container-fluid #carousel .carousel {
+  margin-top: 70px;
+}
+
+main.container-fluid #carousel .carousel .center {
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
@@ -250,7 +269,7 @@ main.container-fluid .carousel .center {
           transform: scale(1.06);
 }
 
-main.container-fluid .carousel div.item {
+main.container-fluid #carousel .carousel div.item {
   background-position: center center;
   background-size: cover;
   height: 550px;
@@ -261,6 +280,15 @@ main.container-fluid .carousel div.item {
   border-radius: 4px;
 }
 
-main.container-fluid .carousel .owl-nav {
+main.container-fluid #carousel .carousel div.item:hover {
+  -webkit-box-shadow: 0 0 10px 2px #FFF;
+          box-shadow: 0 0 10px 2px #FFF;
+}
+
+main.container-fluid #carousel .carousel .owl-nav {
   font-size: 40px;
+}
+
+main.container-fluid #skills {
+  height: 100vh;
 }

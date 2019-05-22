@@ -31,7 +31,7 @@ body {
   -webkit-transition: padding-right .5s;
   -o-transition: padding-right .5s;
   transition: padding-right .5s;
-  background-color: #EFEBE0;
+  background: #f1f1f1;
 }
 
 header {
@@ -41,6 +41,7 @@ header {
   -webkit-transition: background-color .5s;
   -o-transition: background-color .5s;
   transition: background-color .5s;
+  padding-top: 10%;
 }
 
 header .upper-links {
@@ -51,16 +52,30 @@ header .upper-links {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
+  z-index: 4;
   left: 0;
   top: 0;
   height: 75px;
   width: 100%;
-  background-color: #2E2833;
+  background-color: #252525;
   -webkit-transition: padding-right .5s;
   -o-transition: padding-right .5s;
   transition: padding-right .5s;
   border-bottom-left-radius: 15%;
   border-bottom-right-radius: 15%;
+}
+
+header .upper-links:before {
+  content: '';
+  position: relative;
+  left: 50%;
+  top: 60px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-top: 60px solid #252525;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
 }
 
 header .upper-links a {
@@ -87,18 +102,32 @@ header .upper-links .container .fa-stack .fab {
 }
 
 header .upper-links .container .fa-stack .fab:hover {
-  color: #C96E4D;
+  color: #c96e4d;
+}
+
+header #particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 header h1 {
   text-align: center;
-  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 120px;
   font-weight: bold;
+  font-size: 60px;
 }
 
 header h2 {
-  text-align: justify;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 25px;
   margin-top: 20px;
+  color: #666;
 }
 
 header nav {
@@ -122,7 +151,7 @@ header nav .overlay {
 header nav .burger {
   z-index: 105;
   position: fixed;
-  top: 17px;
+  top: 14px;
   right: 15px;
   cursor: pointer;
   opacity: .4;
@@ -131,7 +160,7 @@ header nav .burger {
   transition: opacity, margin-right .5s;
   width: 40px;
   height: 40px;
-  background-color: #C96E4D;
+  background-color: #c96e4d;
   border-radius: 30%;
 }
 
@@ -195,7 +224,7 @@ header nav #mySidenav {
   z-index: 105;
   top: 0;
   right: 0;
-  background-color: #2E2833;
+  background-color: #252525;
   overflow-x: hidden;
   -webkit-transition: width 0.5s;
   -o-transition: width 0.5s;
@@ -209,7 +238,7 @@ header nav #mySidenav a {
   display: block;
   width: 350px;
   height: 50px;
-  color: #C96E4D;
+  color: #c96e4d;
   font-size: 25px;
   padding-top: 7px;
   -webkit-transition: background-color, color .2s;
@@ -218,7 +247,7 @@ header nav #mySidenav a {
 }
 
 header nav #mySidenav a:hover {
-  background-color: #C96E4D;
+  background-color: #c96e4d;
   color: #000;
 }
 
@@ -229,9 +258,6 @@ header .triangle1 {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url("../img/background.png");
-  background-size: cover;
-  background-position: center bottom;
   -webkit-transition: width .5s;
   -o-transition: width .5s;
   transition: width .5s;
@@ -240,15 +266,15 @@ header .triangle1 {
 header a.arrow {
   display: block;
   position: absolute;
-  top: calc(100% - 120px);
+  bottom: 40px;
   border-radius: 50%;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   cursor: pointer;
-  padding: 17.5px;
-  background-color: #2E2833;
+  padding: 25px;
+  background-color: #252525;
   -webkit-transition: left .5s;
   -o-transition: left .5s;
   transition: left .5s;
@@ -256,30 +282,43 @@ header a.arrow {
 
 header a.arrow i {
   font-size: 55px;
-  color: #EFEBE0;
+  color: #f1f1f1;
 }
 
-header a.arrow i:hover {
-  color: #ded5be;
+header a.arrow:hover {
+  background-color: #3c3c3c;
+}
+
+header a.arrow h1.demonstration {
+  margin-top: auto;
 }
 
 main.container-fluid {
   padding-left: 0;
   padding-right: 0;
-  color: #EFEBE0;
+  color: #666;
   overflow-x: hidden;
 }
 
-main.container-fluid h2 {
+main.container-fluid h1 {
   text-align: center;
+  font-size: 50px;
+  font-weight: bold;
 }
 
 main.container-fluid #carousel {
-  background-color: #2E2833;
-  padding-top: 60px;
-  padding-bottom: 46px;
-  height: 100%;
   width: 100%;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding-bottom: 40px;
+}
+
+main.container-fluid #carousel h2 {
+  margin-top: 40px;
+  text-align: center;
+  color: #666;
+  padding-top: 60px;
+  padding-bottom: 20px;
 }
 
 main.container-fluid #carousel .carousel {
@@ -298,17 +337,17 @@ main.container-fluid #carousel .carousel .center {
 main.container-fluid #carousel .carousel div.item {
   background-position: center center;
   background-size: cover;
-  height: 550px;
-  -webkit-box-shadow: 0 0 10px 2px #000;
-          box-shadow: 0 0 10px 2px #000;
+  height: 400px;
+  -webkit-box-shadow: 0 0 20px 4px #000;
+          box-shadow: 0 0 20px 4px #000;
   cursor: -webkit-grab;
   cursor: grab;
   border-radius: 4px;
 }
 
 main.container-fluid #carousel .carousel div.item:hover {
-  -webkit-box-shadow: 0 0 10px 2px #FFF;
-          box-shadow: 0 0 10px 2px #FFF;
+  -webkit-box-shadow: 0 0 20px 4px #c96e4d;
+          box-shadow: 0 0 20px 4px #c96e4d;
 }
 
 main.container-fluid #carousel .carousel .owl-nav {
@@ -316,5 +355,60 @@ main.container-fluid #carousel .carousel .owl-nav {
 }
 
 main.container-fluid #skills {
-  height: 100vh;
+  background-color: #252525;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 30px;
+  padding-left: 30px;
+  color: #CCC;
+  margin-top: 40px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 15px 4px #666;
+          box-shadow: 0 0 15px 4px #666;
+}
+
+main.container-fluid #skills p {
+  margin-bottom: 6px;
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+main.container-fluid #skills .skill-container {
+  width: 100%;
+  background-color: #dddddd;
+  overflow: hidden;
+  -webkit-transition: background-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: background-color 0.2s, -webkit-box-shadow 0.2s;
+  -o-transition: box-shadow 0.2s, background-color 0.2s;
+  transition: box-shadow 0.2s, background-color 0.2s;
+  transition: box-shadow 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
+}
+
+main.container-fluid #skills .skill-container:hover {
+  -webkit-box-shadow: 0 0 15px 0.5px #999;
+          box-shadow: 0 0 15px 0.5px #999;
+}
+
+main.container-fluid #skills .skill-container:hover .skills {
+  background-color: #b5644c;
+}
+
+main.container-fluid #skills .skill-container .skills {
+  padding: 15px;
+  text-align: right;
+}
+
+main.container-fluid #skills .skill-container .html {
+  background-color: #8d5647;
+  width: 10%;
+}
+
+main.container-fluid #skills .skill-container .css {
+  background-color: #8d5647;
+  width: 10%;
+}
+
+main.container-fluid #skills .skill-container .js {
+  width: 10%;
+  background-color: #8d5647;
 }

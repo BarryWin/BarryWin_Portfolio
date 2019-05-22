@@ -13,7 +13,7 @@ $(document).ready(function () {
             });
             $('.triangle1')[0].style.width = 'calc(100% - 350px)';
             burger[0].style.marginRight = "350px";
-            $('.arrow')[0].style.left = 'calc(50% - 175px)';
+            $('.arrow, .upper-links:before')[0].style.left = 'calc(50% - 175px)';
         } else {
             $('.overlay').fadeOut(500);
             sideNav[0].style.width = "0";
@@ -45,20 +45,147 @@ $(document).ready(function () {
             margin:60,
             nav:true,
             autoplay:true,
-            autoplayTimeout:2500,
+            autoplayTimeout:2000,
             autoplayHoverPause:true,
             responsive:{
                 600:{
-                    items:2
+                    items:4
                 }
             }
         });
 
 //smoothScroll
-
     $('a[href^="#"]').click(function () {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top;
         $('body,html').animate({scrollTop: destination},400)
+    });
+
+//skills-animation
+    var skill_html = $(".html").offset().top;
+    var skill_css = $(".css").offset().top;
+    var skill_js = $(".js").offset().top;
+    $(document).scroll(function () {
+        if ($(document).scrollTop() + $(window).height() > skill_html){
+            $('.html').animate({'width': '90%'},1400,"swing");
+        }
+        if($(document).scrollTop() + $(window).height() > skill_css){
+            $('.css').animate({'width': '80%'},1400,"swing");
+        }
+        if($(document).scrollTop() + $(window).height() > skill_js){
+            $('.js').animate({'width': '65%'},1400,"swing");
+        }
+    });
+
+//particleJS plugin
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 80,
+                "density": {
+                    "enable": true,
+                    "value_area": 1121.6780303333778
+                }
+            },
+            "color": {
+                "value": "#8d5647"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 9,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ccc",
+                "opacity": 0.4,
+                "width": 2
+            },
+            "move": {
+                "enable": true,
+                "speed": 5,
+                "direction": "none",
+                "random": true,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": false,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
     })
 });

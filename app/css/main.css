@@ -55,7 +55,7 @@ header .upper-links {
   z-index: 4;
   left: 0;
   top: 0;
-  height: 75px;
+  height: 65px;
   width: 100%;
   background-color: #252525;
   -webkit-transition: padding-right .5s;
@@ -69,13 +69,13 @@ header .upper-links:before {
   content: '';
   position: relative;
   left: 50%;
-  top: 60px;
+  top: 55px;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  border-top: 60px solid #252525;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
+  border-top: 50px solid #252525;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
 }
 
 header .upper-links a {
@@ -125,7 +125,7 @@ header h1 {
 header h2 {
   text-align: center;
   line-height: 1.5;
-  font-size: 25px;
+  font-size: 22px;
   margin-top: 20px;
   color: #666;
 }
@@ -151,7 +151,7 @@ header nav .overlay {
 header nav .burger {
   z-index: 105;
   position: fixed;
-  top: 14px;
+  top: 10px;
   right: 15px;
   cursor: pointer;
   opacity: .4;
@@ -273,7 +273,7 @@ header a.arrow {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   cursor: pointer;
-  padding: 25px;
+  padding: 20px;
   background-color: #252525;
   -webkit-transition: left .5s;
   -o-transition: left .5s;
@@ -281,7 +281,7 @@ header a.arrow {
 }
 
 header a.arrow i {
-  font-size: 55px;
+  font-size: 45px;
   color: #f1f1f1;
 }
 
@@ -411,4 +411,56 @@ main.container-fluid #skills .skill-container .css {
 main.container-fluid #skills .skill-container .js {
   width: 10%;
   background-color: #8d5647;
+}
+
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  /**/
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  /**/
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  /**/
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  /**/
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  /**/
+}
+
+/*==========  Mobile First  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  /**/
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  /**/
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  /**/
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  /**/
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  /**/
 }

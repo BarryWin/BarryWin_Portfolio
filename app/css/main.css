@@ -83,7 +83,7 @@ header .upper-links a {
 }
 
 header .upper-links .container .fa-stack {
-  font-size: 1.3em;
+  font-size: 1.24em;
 }
 
 header .upper-links .container .fa-stack:active {
@@ -314,11 +314,12 @@ main.container-fluid #carousel {
 }
 
 main.container-fluid #carousel h2 {
-  margin-top: 40px;
+  margin-top: 30px;
   text-align: center;
   color: #666;
   padding-top: 60px;
   padding-bottom: 20px;
+  font-size: 31px;
 }
 
 main.container-fluid #carousel .carousel {
@@ -360,17 +361,21 @@ main.container-fluid #skills {
   padding-bottom: 50px;
   padding-right: 30px;
   padding-left: 30px;
-  color: #CCC;
+  color: #DDD;
   margin-top: 40px;
   border-radius: 20px;
   -webkit-box-shadow: 0 0 15px 4px #666;
           box-shadow: 0 0 15px 4px #666;
 }
 
+main.container-fluid #skills h1 {
+  font-size: 45px;
+}
+
 main.container-fluid #skills p {
   margin-bottom: 6px;
   margin-top: 20px;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 main.container-fluid #skills .skill-container {
@@ -394,7 +399,7 @@ main.container-fluid #skills .skill-container:hover .skills {
 }
 
 main.container-fluid #skills .skill-container .skills {
-  padding: 15px;
+  padding: 12px;
   text-align: right;
 }
 

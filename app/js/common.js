@@ -65,6 +65,9 @@ $(document).ready(function () {
     var skill_html = $(".html").offset().top;
     var skill_css = $(".css").offset().top;
     var skill_js = $(".js").offset().top;
+    var skill_jq = $(".jq").offset().top;
+    var skill_boot = $(".boot").offset().top;
+    var skill_php = $(".php").offset().top;
     $(document).scroll(function () {
         if ($(document).scrollTop() + $(window).height() > skill_html){
             $('.html').animate({'width': '90%'},1400,"swing");
@@ -72,8 +75,17 @@ $(document).ready(function () {
         if($(document).scrollTop() + $(window).height() > skill_css){
             $('.css').animate({'width': '80%'},1400,"swing");
         }
+        if($(document).scrollTop() + $(window).height() > skill_boot){
+            $('.boot').animate({'width': '50%'},1400,"swing");
+        }
+        if($(document).scrollTop() + $(window).height() > skill_jq){
+            $('.jq').animate({'width': '60%'},1400,"swing");
+        }
         if($(document).scrollTop() + $(window).height() > skill_js){
-            $('.js').animate({'width': '65%'},1400,"swing");
+            $('.js').animate({'width': '40%'},1400,"swing");
+        }
+        if($(document).scrollTop() + $(window).height() > skill_php){
+            $('.php').animate({'width': '20%'},1400,"swing");
         }
     });
 

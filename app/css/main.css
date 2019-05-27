@@ -14,6 +14,22 @@
   src: url("../fonts/caviar_dreams/caviar_dreams.eot?#iefix") format("embedded-opentype"), url("../fonts/caviar_dreams/caviar_dreams.woff") format("woff"), url("../fonts/caviar_dreams/caviar_dreams.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "caviar_dreams";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../fonts/caviar_dreams/caviar_dreams_italic.eot");
+  src: url("../fonts/caviar_dreams/caviar_dreams_italic.eot?#iefix") format("embedded-opentype"), url("../fonts/caviar_dreams/caviar_dreams_italic.woff") format("woff"), url("../fonts/caviar_dreams/caviar_dreams_italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/lato/Lato-Bold.eot");
+  src: url("../fonts/lato/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/lato/Lato-Bold.woff") format("woff"), url("../fonts/lato/Lato-Bold.ttf") format("truetype");
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -31,7 +47,7 @@ body {
   -webkit-transition: padding-right .5s;
   -o-transition: padding-right .5s;
   transition: padding-right .5s;
-  background: #f1f1f1;
+  background: #f6f6f6;
 }
 
 header {
@@ -42,6 +58,7 @@ header {
   -o-transition: background-color .5s;
   transition: background-color .5s;
   padding-top: 10%;
+  z-index: 1;
 }
 
 header .upper-links {
@@ -55,7 +72,7 @@ header .upper-links {
   z-index: 4;
   left: 0;
   top: 0;
-  height: 65px;
+  height: 60px;
   width: 100%;
   background-color: #252525;
   -webkit-transition: padding-right .5s;
@@ -69,13 +86,13 @@ header .upper-links:before {
   content: '';
   position: relative;
   left: 50%;
-  top: 55px;
+  top: 45px;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  border-top: 50px solid #252525;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
+  border-top: 35px solid #252525;
+  border-left: 39px solid transparent;
+  border-right: 39px solid transparent;
 }
 
 header .upper-links a {
@@ -83,7 +100,7 @@ header .upper-links a {
 }
 
 header .upper-links .container .fa-stack {
-  font-size: 1.24em;
+  font-size: 1.22em;
 }
 
 header .upper-links .container .fa-stack:active {
@@ -98,7 +115,7 @@ header .upper-links .container .fa-stack .fas {
 
 header .upper-links .container .fa-stack .fab {
   color: #000;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 header .upper-links .container .fa-stack .fab:hover {
@@ -117,15 +134,15 @@ header h1 {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 120px;
+  margin-top: 130px;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 53px;
 }
 
 header h2 {
   text-align: center;
   line-height: 1.5;
-  font-size: 22px;
+  font-size: 20px;
   margin-top: 20px;
   color: #666;
 }
@@ -151,17 +168,17 @@ header nav .overlay {
 header nav .burger {
   z-index: 105;
   position: fixed;
-  top: 10px;
+  top: 12px;
   right: 15px;
   cursor: pointer;
   opacity: .4;
   -webkit-transition: opacity, margin-right .5s;
   -o-transition: opacity, margin-right .5s;
   transition: opacity, margin-right .5s;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   background-color: #c96e4d;
-  border-radius: 30%;
+  border-radius: 15%;
 }
 
 header nav .burger:hover {
@@ -172,7 +189,7 @@ header nav .burger span, header nav .burger span:before, header nav .burger span
   position: absolute;
   border-radius: 50px;
   display: block;
-  width: 26px;
+  width: 24px;
   height: 3px;
   background-color: #fff;
   top: 0;
@@ -273,7 +290,7 @@ header a.arrow {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   cursor: pointer;
-  padding: 20px;
+  padding: 17px;
   background-color: #252525;
   -webkit-transition: left .5s;
   -o-transition: left .5s;
@@ -282,7 +299,7 @@ header a.arrow {
 
 header a.arrow i {
   font-size: 45px;
-  color: #f1f1f1;
+  color: #f6f6f6;
 }
 
 header a.arrow:hover {
@@ -298,6 +315,7 @@ main.container-fluid {
   padding-right: 0;
   color: #666;
   overflow-x: hidden;
+  background-color: #F3F3F3;
 }
 
 main.container-fluid h1 {
@@ -309,7 +327,7 @@ main.container-fluid h1 {
 main.container-fluid #carousel {
   width: 100%;
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #F3F3F3;
   padding-bottom: 40px;
 }
 
@@ -319,7 +337,7 @@ main.container-fluid #carousel h2 {
   color: #666;
   padding-top: 60px;
   padding-bottom: 20px;
-  font-size: 31px;
+  font-size: 29px;
 }
 
 main.container-fluid #carousel .carousel {
@@ -357,25 +375,26 @@ main.container-fluid #carousel .carousel .owl-nav {
 
 main.container-fluid #skills {
   background-color: #252525;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 150px;
+  padding-left: 150px;
   color: #DDD;
   margin-top: 40px;
   border-radius: 20px;
   -webkit-box-shadow: 0 0 15px 4px #666;
           box-shadow: 0 0 15px 4px #666;
+  margin-bottom: 40px;
 }
 
 main.container-fluid #skills h1 {
-  font-size: 45px;
+  font-size: 40px;
 }
 
 main.container-fluid #skills p {
   margin-bottom: 6px;
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 main.container-fluid #skills .skill-container {
@@ -399,8 +418,9 @@ main.container-fluid #skills .skill-container:hover .skills {
 }
 
 main.container-fluid #skills .skill-container .skills {
-  padding: 12px;
+  padding: 8px;
   text-align: right;
+  font-size: 14px;
 }
 
 main.container-fluid #skills .skill-container .html {
@@ -413,9 +433,112 @@ main.container-fluid #skills .skill-container .css {
   width: 10%;
 }
 
+main.container-fluid #skills .skill-container .boot {
+  background-color: #8d5647;
+  width: 10%;
+}
+
+main.container-fluid #skills .skill-container .jq {
+  width: 10%;
+  background-color: #8d5647;
+}
+
 main.container-fluid #skills .skill-container .js {
   width: 10%;
   background-color: #8d5647;
+}
+
+main.container-fluid #skills .skill-container .php {
+  width: 5%;
+  background-color: #8d5647;
+}
+
+#footer {
+  background: #222;
+  text-align: center;
+  padding: 40px 0;
+  color: #FFF;
+}
+
+#footer span {
+  -webkit-animation-name: H-pulse;
+          animation-name: H-pulse;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  color: #ff5252;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+@-webkit-keyframes H-pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes H-pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.copyright {
+  margin: 0;
+}
+
+.copyright a {
+  border-bottom: 1px dotted #fff;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.social-links li {
+  display: inline-block;
+  margin: 5px;
+}
+
+.social-links a {
+  width: 36px;
+  height: 36px;
+  display: block;
+  line-height: 35px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.social-links a:hover {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /*==========  Desktop First  ==========*/

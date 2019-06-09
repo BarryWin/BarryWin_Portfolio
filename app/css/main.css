@@ -22,14 +22,6 @@
   src: url("../fonts/caviar_dreams/caviar_dreams_italic.eot?#iefix") format("embedded-opentype"), url("../fonts/caviar_dreams/caviar_dreams_italic.woff") format("woff"), url("../fonts/caviar_dreams/caviar_dreams_italic.ttf") format("truetype");
 }
 
-@font-face {
-  font-family: "Lato";
-  font-weight: bold;
-  font-style: normal;
-  src: url("../fonts/lato/Lato-Bold.eot");
-  src: url("../fonts/lato/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/lato/Lato-Bold.woff") format("woff"), url("../fonts/lato/Lato-Bold.ttf") format("truetype");
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

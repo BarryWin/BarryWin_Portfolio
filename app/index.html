@@ -8,6 +8,7 @@
     <meta name="twitter:title" content="twitter">
     <title>Portfolio</title>
     <link rel="stylesheet" href="libs/Font-Awesome/css/all.min.css">
+    <link rel="stylesheet" href="miicPortfolio.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -73,7 +74,7 @@
 </header>
 <main class="container-fluid">
     <section id="carousel">
-<!--        <h1 class="demonstration">Let me demonstrate some of my skills</h1>-->
+        <!--        <h1 class="demonstration">Let me demonstrate some of my skills</h1>-->
         <h2>Here are some free pictures I like on the web</h2>
         <div class="carousel owl-carousel owl-theme">
             <div class="item" style="background-image: url(img/carousel/1.jpg)"></div>
@@ -85,38 +86,146 @@
             <div class="item" style="background-image: url(img/carousel/7.jpg)"></div>
         </div>
     </section>
-    <section id="skills" class="container">
-        <h1>My Skills</h1>
+<!--    <section id="skills" class="container">-->
+<!--        <h1>My Skills</h1>-->
+<!--        <span class="miic-html"></span>-->
+<!--        &lt;!&ndash;        <i class="fab fa-html5"></i>&ndash;&gt;-->
+<!--        <div style="width: 90%; display: inline-block;">-->
+<!--            <p>HTML - Язык разметки гипертекста, позволяющий создать структуру веб-страницы-->
+<!--            </p>-->
+<!--            <div class="skill-container">-->
+<!--                <div class="skills html">90%</div>-->
+<!--            </div>-->
+<!--        </div>-->
 
-        <p>HTML - Язык разметки гипертекста, позволяющий создать структуру веб-страницы
-           </p>
-        <div class="skill-container">
-            <div class="skills html">90%</div>
-        </div>
+<!--        <span class="miic-css"></span>-->
+<!--        &lt;!&ndash;        <i class="fab fa-css3-alt"></i>&ndash;&gt;-->
+<!--        <div style="width: 90%; display: inline-block;">-->
+<!--            <p>CSS/Sass - Язык оформления, благодаря которому веб-страницы становятся красивыми </p>-->
+<!--            <div class="skill-container">-->
+<!--                <div class="skills css">80%</div>-->
+<!--            </div>-->
+<!--        </div>-->
 
-        <p>CSS/Sass</p>
-        <div class="skill-container">
-            <div class="skills css">80%</div>
-        </div>
+<!--        <span class="miic-js"></span>-->
+<!--        <div style="width: 90%; display: inline-block;">-->
+<!--            <p>Jquery</p>-->
+<!--            <div class="skill-container">-->
+<!--                <div class="skills jq">60%</div>-->
+<!--            </div>-->
+<!--        </div>-->
 
-        <p>Jquery</p>
-        <div class="skill-container">
-            <div class="skills jq">60%</div>
-        </div>
+<!--        <span class="miic-bootstrap"></span>-->
+<!--        &lt;!&ndash;        <i class="fab fa-bootstrap"></i>&ndash;&gt;-->
+<!--        <div style="width: 90%; display: inline-block;">-->
+<!--            <p>Bootstrap</p>-->
+<!--            <div class="skill-container">-->
+<!--                <div class="skills boot">50%</div>-->
+<!--            </div>-->
 
-        <p>Bootstrap</p>
-        <div class="skill-container">
-            <div class="skills boot">50%</div>
-        </div>
+<!--        </div>-->
 
-        <p>JavaScript</p>
-        <div class="skill-container">
-            <div class="skills js">40%</div>
-        </div>
+<!--        <span class="miic-php"></span>-->
+<!--        <div style="width: 90%; display: inline-block;">-->
+<!--            <p>PHP</p>-->
+<!--            <div class="skill-container">-->
+<!--                <div class="skills php">20%</div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
-        <p>PHP</p>
-        <div class="skill-container">
-            <div class="skills php">20%</div>
+    <section class="circle-skills container">
+        <h2>My Skills</h2>
+        <div class="row justify-content-center">
+            <div class="circle-container col-md-4 col-sm-6">
+                <svg class="progress-ring" width="154" height="154">
+                    <circle stroke="#e6e1e2"
+                            stroke-width="10" cx="77" cy="77" r="67" fill="transparent">
+                    </circle>
+                    <circle class="progress-ring-circle html" stroke="#914b30"
+                            stroke-width="10" cx="77" cy="77" r="67" fill="transparent">
+                    </circle>
+                </svg>
+                <span class="miic-html"></span>
+                <p class="percent">95%</p>
+                <h4>HTML</h4>
+                <p>Язык разметки гипертекста, позволяющий создать структуру или
+                    так называемый &#171скелет&#187 веб-страницы</p>
+            </div>
+
+            <div class="circle-container col-md-4 col-sm-6">
+                <svg class="progress-ring" width="154" height="154">
+                    <circle stroke="#e6e1e2"
+                            stroke-width="10" cx="77" cy="77" r="67" fill="transparent">
+                    </circle>
+                    <circle class="progress-ring-circle css" stroke="#285f97"
+                            stroke-width="10" cx="77" cy="77" r="67" fill="transparent">
+                    </circle>
+                </svg>
+                <span class="miic-css"></span>
+                <p class="percent">80%</p>
+                <h4>CSS/Sass</h4>
+                <p>Язык описания внешнего вида документа, благодаря которому веб-страница
+                    становится красивой</p>
+            </div>
+
+            <div class="circle-container col-md-4 col-sm-6">
+                <svg class="progress-ring" width="154" height="154">
+                    <circle stroke="#e6e1e2"
+                            stroke-width="10" cx="77" cy="77" r="67" fill="transparent">
+                    </circle>
+                    <circle class="progress-ring-circle js" stroke="#ad954a"
+                            stroke-width="10" cx="77" cy="77" r="67" fill="transparent">
+                    </circle>
+                </svg>
+                <span class="miic-js"></span>
+                <p class="percent">70%</p>
+                <h4>Javascript/Jquery</h4>
+                <p>Сценарный язык программирования, используемый для придания динамики и интерактивности веб-страницам</p>
+            </div>
+
+            <div class="circle-container col-md-4 col-sm-6">
+                <svg class="progress-ring" width="154" height="154">
+                    <circle stroke="#e6e1e2"
+                            stroke-width="10" cx="77" cy="77" r="67" fill="transparent">
+                    </circle>
+                    <circle class="progress-ring-circle boot" stroke="#563d7c"
+                            stroke-width="10" cx="77" cy="77" r="67" fill="transparent">
+                    </circle>
+                </svg>
+                <span class="miic-bootstrap"></span>
+                <p class="percent">60%</p>
+                <h4>Bootstrap</h4>
+                <p>Фреймворк, набор HTML и CSS инструментов и шаблонов
+                    для более эффективного и быстрого создания сайтов</p>
+            </div>
+
+            <div class="circle-container col-md-4 col-sm-6">
+                <svg class="progress-ring" width="154" height="154">
+                    <circle stroke="#e6e1e2"
+                            stroke-width="10" cx="77" cy="77" r="67" fill="transparent">
+                    </circle>
+                    <circle class="progress-ring-circle php" stroke="#6f78a0"
+                            stroke-width="10" cx="77" cy="77" r="67" fill="transparent">
+                    </circle>
+                </svg>
+                <span class="miic-php"></span>
+                <p class="percent">30%</p>
+                <h4>PHP</h4>
+            </div>
+
+
+<!--            <div class="circle-container col-md-4 col-sm-6">-->
+<!--                <svg class="progress-ring" width="154" height="154">-->
+<!--                    <circle stroke="#e6e1e2"-->
+<!--                            stroke-width="10" cx="77" cy="77" r="67" fill="transparent">-->
+<!--                    </circle>-->
+<!--                    <circle class="progress-ring-circle" stroke="#692c29"-->
+<!--                            stroke-width="10" cx="77" cy="77" r="67" fill="transparent">-->
+<!--                    </circle>-->
+<!--                </svg>-->
+<!--            </div>-->
+
         </div>
     </section>
 </main>
@@ -128,17 +237,22 @@
 
                 <ul class="social-links">
                     <li><a href="index.html#" class="wow fadeInUp"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="index.html#" class="wow fadeInUp" data-wow-delay=".1s"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="index.html#" class="wow fadeInUp" data-wow-delay=".2s"><i class="fab fa-google-plus"></i></a></li>
-                    <li><a href="index.html#" class="wow fadeInUp" data-wow-delay=".4s"><i class="fab fa-pinterest"></i></a></li>
-                    <li><a href="index.html#" class="wow fadeInUp" data-wow-delay=".5s"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href="index.html#" class="wow fadeInUp" data-wow-delay=".1s"><i
+                            class="fab fa-twitter"></i></a></li>
+                    <li><a href="index.html#" class="wow fadeInUp" data-wow-delay=".2s"><i
+                            class="fab fa-google-plus"></i></a></li>
+                    <li><a href="index.html#" class="wow fadeInUp" data-wow-delay=".4s"><i class="fab fa-pinterest"></i></a>
+                    </li>
+                    <li><a href="index.html#" class="wow fadeInUp" data-wow-delay=".5s"><i
+                            class="fa fa-envelope"></i></a></li>
                 </ul>
 
                 <p class="heart">
                     Made with <span class="fa fa-heart fa-2x animated pulse"></span> by BarryWin
                 </p>
                 <p class="copyright">
-                    © 2015 John Doe | Images: <a href="https://unsplash.com/">Unsplash</a> & <a href="http://zoomwalls.com/">Zoomwalls</a>
+                    © 2019 Slava Vlasov | Images: <a href="https://unsplash.com/">Unsplash</a> & <a
+                        href="http://zoomwalls.com/">Zoomwalls</a>
                 </p>
 
             </div>

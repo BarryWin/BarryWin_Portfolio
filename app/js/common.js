@@ -38,56 +38,85 @@ $(document).ready(function () {
     });
 
 //owl-carousel
-        $(".owl-carousel").owlCarousel({
-            items:2,
-            center: true,
-            loop:true,
-            margin:60,
-            nav:true,
-            autoplay:true,
-            autoplayTimeout:2000,
-            autoplayHoverPause:true,
-            responsive:{
-                600:{
-                    items:4
-                }
+    $(".owl-carousel").owlCarousel({
+        items: 2,
+        center: true,
+        loop: true,
+        margin: 60,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+            600: {
+                items: 4
             }
-        });
+        }
+    });
 
 //smoothScroll
     $('a[href^="#"]').click(function () {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top;
-        $('body,html').animate({scrollTop: destination},400)
+        $('body,html').animate({scrollTop: destination}, 400)
     });
 
 //skills-animation
-    var skill_html = $(".html").offset().top;
-    var skill_css = $(".css").offset().top;
-    var skill_js = $(".js").offset().top;
-    var skill_jq = $(".jq").offset().top;
-    var skill_boot = $(".boot").offset().top;
-    var skill_php = $(".php").offset().top;
+//     var skill_html = $(".html").offset().top;
+//     var skill_css = $(".css").offset().top;
+//     // var skill_js = $(".js").offset().top;
+//     var skill_jq = $(".jq").offset().top;
+//     var skill_boot = $(".boot").offset().top;
+//     var skill_php = $(".php").offset().top;
+//     $(document).scroll(function () {
+//         if ($(document).scrollTop() + $(window).height() > skill_html){
+//             $('.html').animate({'width': '90%'},1400,"swing");
+//         }
+//         if($(document).scrollTop() + $(window).height() > skill_css){
+//             $('.css').animate({'width': '80%'},1400,"swing");
+//         }
+//         if($(document).scrollTop() + $(window).height() > skill_boot){
+//             $('.boot').animate({'width': '50%'},1400,"swing");
+//         }
+//         if($(document).scrollTop() + $(window).height() > skill_jq){
+//             $('.jq').animate({'width': '60%'},1400,"swing");
+//         }
+//         // if($(document).scrollTop() + $(window).height() > skill_js){
+//         //     $('.js').animate({'width': '40%'},1400,"swing");
+//         // }
+//         if($(document).scrollTop() + $(window).height() > skill_php){
+//             $('.php').animate({'width': '20%'},1400,"swing");
+//         }
+//     });
+
+//circle-progress-bar
+
+    const circles = $('.progress-ring-circle');
+    const radius = circles.attr('r');
+    const circumference = 2 * Math.PI * radius;
+
+    circles.css('strokeDasharray', `0 ${circumference}`);
+
+    // circle.style.strokeDashoffset = - circumference;
+
+    function setProgress(percent, circleClass) {
+        const circle = $(`.${circleClass}`);
+        const offset = circumference - percent / 100 * circumference;
+        // circle.style.strokeDashoffset = offset - circumference;
+        circle.css('strokeDasharray', `${circumference - offset} ${offset}`)
+    }
+
+    var skillsTop = $(".circle-skills").offset().top;
     $(document).scroll(function () {
-        if ($(document).scrollTop() + $(window).height() > skill_html){
-            $('.html').animate({'width': '90%'},1400,"swing");
-        }
-        if($(document).scrollTop() + $(window).height() > skill_css){
-            $('.css').animate({'width': '80%'},1400,"swing");
-        }
-        if($(document).scrollTop() + $(window).height() > skill_boot){
-            $('.boot').animate({'width': '50%'},1400,"swing");
-        }
-        if($(document).scrollTop() + $(window).height() > skill_jq){
-            $('.jq').animate({'width': '60%'},1400,"swing");
-        }
-        if($(document).scrollTop() + $(window).height() > skill_js){
-            $('.js').animate({'width': '40%'},1400,"swing");
-        }
-        if($(document).scrollTop() + $(window).height() > skill_php){
-            $('.php').animate({'width': '20%'},1400,"swing");
+        if ($(document).scrollTop() + $(window).height() > skillsTop) {
+            setProgress(95, 'html');
+            setProgress(80, 'css');
+            setProgress(70, 'js');
+            setProgress(60, 'boot');
+            setProgress(30,'php')
         }
     });
+
 
 //particleJS plugin
     particlesJS("particles-js", {

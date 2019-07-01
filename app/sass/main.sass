@@ -103,8 +103,9 @@ header
       transition: opacity, margin-right .5s
       width: 32px
       height: 32px
-      background-color: $accent
+      background-color: #FFF
       border-radius: 15%
+      //border: 1px solid #666
       &:hover
         opacity: 1
       span, span:before, span:after
@@ -113,7 +114,7 @@ header
         display: block
         width: 24px
         height: 3px
-        background-color: #fff
+        background-color: #666
         top: 0
         right: 0
         left: 0
@@ -175,7 +176,7 @@ header
     left: 50%
     transform: translateX(-50%)
     cursor: pointer
-    padding: 17px
+    padding: 14px
     background-color: $dark_color
     transition: left .5s
     i
@@ -229,58 +230,150 @@ main.container-fluid
           box-shadow: 0 0 20px 4px $accent
       .owl-nav
         font-size: 40px
-  #skills
-    background-color: $dark_color
-    padding:
-      top: 40px
-      bottom: 40px
-      right: 150px
-      left: 150px
-    color: #DDD
-    margin-top: 40px
-    border-radius: 20px
-    box-shadow: 0 0 15px 4px #666
-    margin-bottom: 40px
-    h1
-      font-size: 40px
-    p
-      margin:
-        bottom: 6px
-        top: 20px
-      font-size: 16px
-    .skill-container
-      width: 100%
-      background-color: #dddddd
-      //border-radius: 8px
-      overflow: hidden
-      transition: box-shadow 0.2s, background-color 0.2s
-      &:hover
-        box-shadow: 0 0 15px 0.5px #999
-      &:hover .skills
-        background-color: #b5644c
-      .skills
-        padding: 8px
-        //border-radius: 7px
-        text-align: right
-        font-size: 14px
-      .html
-        background-color: #8d5647
-        width: 10%
-      .css
-        background-color: #8d5647
-        width: 10%
-      .boot
-        background-color: #8d5647
-        width: 10%
-      .jq
-        width: 10%
-        background-color: #8d5647
-      .js
-        width: 10%
-        background-color: #8d5647
-      .php
-        width: 5%
-        background-color: #8d5647
+  //#skills
+  //  background-color: $dark_color
+  //  padding:
+  //    top: 40px
+  //    bottom: 50px
+  //    right: 130px
+  //    left: 130px
+  //  color: #DDD
+  //  margin-top: 40px
+  //  border-radius: 20px
+  //  box-shadow: 0 0 15px 4px #666
+  //  margin-bottom: 40px
+  //  h1
+  //    font-size: 40px
+  //  p
+  //    margin:
+  //      bottom: 6px
+  //      top: 20px
+  //    font-size: 16px
+  //  span[class^="miic-"]
+  //    //color: #914b30
+  //    font-size: 60px
+  //    margin-right: 20px
+  //  .miic-html:before
+  //    content: /e902
+  //    color: #914b30
+  //  .miic-css:before
+  //    content: /e901
+  //    color: #285f97
+  //  .miic-js:before
+  //    content: /e903
+  //    color: #ad954a
+  //  .miic-bootstrap:before
+  //    content: /e900
+  //    //font-size: 40px
+  //  .miic-php:before
+  //    content: /e904
+  //    color: #6f78a0
+  //  .fab
+  //    //color: #a85424
+  //    font-size: 70px
+  //    margin-right: 20px
+  //    &.fa-html5
+  //      color: #914b30
+  //    &.fa-css3-alt
+  //      color: #285f97
+  //    &.fa-php
+  //      font-size: 49px
+  //      color: #6585cc
+  //    &.fa-bootstrap
+  //      color: #ffffff
+  //    &.fa-js-square
+  //      color: #c77328
+  //  .skill-container
+  //    display: inline-block
+  //    width: 100%
+  //    background-color: #dddddd
+  //    //border-radius: 8px
+  //    overflow: hidden
+  //    transition: box-shadow 0.2s, background-color 0.2s
+  //    &:hover
+  //      box-shadow: 0 0 15px 0.5px #999
+  //    &:hover .skills
+  //      background-color: #b5644c
+  //    .skills
+  //      padding: 8px
+  //      //border-radius: 7px
+  //      text-align: right
+  //      font-size: 14px
+  //    .html
+  //      background-color: #8d5647
+  //      width: 10%
+  //    .css
+  //      background-color: #8d5647
+  //      width: 10%
+  //    .boot
+  //      background-color: #8d5647
+  //      width: 10%
+  //    .jq
+  //      width: 10%
+  //      background-color: #8d5647
+  //    .js
+  //      width: 10%
+  //      background-color: #8d5647
+  //    .php
+  //      width: 5%
+  //      background-color: #8d5647
+  .circle-skills
+    margin-top: 50px
+    h2
+      text-align: center
+      font-size: 42px
+      font-weight: normal
+      margin-bottom: 80px
+    .circle-container
+      position: relative
+      text-align: center
+      padding:
+        bottom: 60px
+      span[class^="miic-"]
+        position: absolute
+        line-height: 140px
+        font-size: 60px
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        margin: auto
+      .miic-html:before
+        content: /e902
+        color: #914b30
+      .miic-css:before
+        content: /e901
+        color: #285f97
+      .miic-js:before
+        content: /e903
+        color: #ad954a
+      .miic-bootstrap:before
+        content: /e900
+        font-size: 58px
+      .miic-php:before
+        content: /e904
+        color: #6f78a0
+      h4
+        margin-top: 8px
+      .percent
+        position: absolute
+        line-height: 140px
+        top: 46px
+        left: 0
+        right: 0
+        bottom: 0
+        margin: auto
+        font-size: 18px
+
+
+      .progress-ring-circle
+        transform-origin: center
+        transform: rotate(-90deg)
+        text-align: center
+        //stroke-dasharray: 0 1300px
+        transition: stroke-dasharray 1.8s
+
+
 #footer
   background: #222
   text-align: center

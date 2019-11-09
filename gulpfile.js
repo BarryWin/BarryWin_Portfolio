@@ -56,7 +56,7 @@ gulp.task('build',async function() {
         .pipe(gulp.dest('dist/css'));
     var buildJs = gulp.src('app/js/*.js')
         .pipe(gulp.dest('dist/js'));
-    var buldHtml = gulp.src('app/*.html')
+    var buldHtml = gulp.src('app/*.+(html|css)')
         .pipe(gulp.dest('dist'));
     var buildFonts = gulp.src('app/fonts/**/*')
         .pipe(gulp.dest('dist/fonts'));

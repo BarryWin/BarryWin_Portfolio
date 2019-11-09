@@ -1,13 +1,5 @@
 @font-face {
   font-family: "caviar_dreams";
-  font-weight: bold;
-  font-style: normal;
-  src: url("../fonts/caviar_dreams/caviar_dreams_bold.eot");
-  src: url("../fonts/caviar_dreams/caviar_dreams_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/caviar_dreams/caviar_dreams_bold.woff") format("woff"), url("../fonts/caviar_dreams/caviar_dreams_bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "caviar_dreams";
   font-weight: normal;
   font-style: normal;
   src: url("../fonts/caviar_dreams/caviar_dreams.eot");
@@ -15,11 +7,35 @@
 }
 
 @font-face {
-  font-family: "caviar_dreams";
+  font-family: "FiraSans";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/firasans/FiraSans-Bold.eot");
+  src: url("../fonts/firasans/FiraSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/firasans/FiraSans-Bold.woff") format("woff"), url("../fonts/firasans/FiraSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "FiraSans";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/firasans/FiraSans-Regular.eot");
+  src: url("../fonts/firasans/FiraSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/firasans/FiraSans-Regular.woff") format("woff"), url("../fonts/firasans/FiraSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "FiraSans";
   font-weight: normal;
   font-style: italic;
-  src: url("../fonts/caviar_dreams/caviar_dreams_italic.eot");
-  src: url("../fonts/caviar_dreams/caviar_dreams_italic.eot?#iefix") format("embedded-opentype"), url("../fonts/caviar_dreams/caviar_dreams_italic.woff") format("woff"), url("../fonts/caviar_dreams/caviar_dreams_italic.ttf") format("truetype");
+  src: url("../fonts/firasans/FiraSans-Italic.eot");
+  src: url("../fonts/firasans/FiraSans-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/firasans/FiraSans-Italic.woff") format("woff"), url("../fonts/firasans/FiraSans-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "FiraSans";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/firasans/FiraSans-Light.eot");
+  src: url("../fonts/firasans/FiraSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/firasans/FiraSans-Light.woff") format("woff"), url("../fonts/firasans/FiraSans-Light.ttf") format("truetype");
 }
 
 * {
@@ -27,7 +43,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "caviar_dreams", sans-serif;
+  font-family: 'FiraSans', sans-serif;
 }
 
 html {
@@ -42,6 +58,25 @@ body {
   background: #f6f6f6;
 }
 
+h2 {
+  font-size: 38px;
+  font-weight: normal;
+  color: #4b4b4b;
+}
+
+.skills-underline {
+  position: relative;
+  z-index: 10;
+  width: 115px;
+  height: 5px;
+  background-color: #ab8d92;
+  border: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+  margin-top: 17px;
+}
+
 header {
   width: 100%;
   height: 100%;
@@ -51,6 +86,18 @@ header {
   transition: background-color .5s;
   padding-top: 10%;
   z-index: 1;
+  background-image: url("../img/main-img.png");
+  background-size: cover;
+}
+
+header .main-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: #000;
+  opacity: .35;
+  z-index: 4;
 }
 
 header .upper-links {
@@ -61,7 +108,7 @@ header .upper-links {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  z-index: 4;
+  z-index: 10;
   left: 0;
   top: 0;
   height: 60px;
@@ -120,23 +167,30 @@ header #particles-js {
   height: 100%;
   top: 0;
   left: 0;
+  z-index: 5;
 }
 
-header h1 {
+header .text {
+  position: relative;
+  z-index: 6;
+}
+
+header .text h1 {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 130px;
   font-weight: bold;
   font-size: 53px;
+  color: #232323;
 }
 
-header h2 {
+header .text h3 {
   text-align: center;
   line-height: 1.5;
   font-size: 20px;
   margin-top: 20px;
-  color: #666;
+  color: #d9dbdf;
 }
 
 header nav {
@@ -278,19 +332,20 @@ header a.arrow {
   bottom: 40px;
   border-radius: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translateX(-51%);
+      -ms-transform: translateX(-51%);
+          transform: translateX(-51%);
   cursor: pointer;
-  padding: 14px;
+  padding: 15px;
   background-color: #252525;
   -webkit-transition: left .5s;
   -o-transition: left .5s;
   transition: left .5s;
+  z-index: 5;
 }
 
 header a.arrow i {
-  font-size: 45px;
+  font-size: 42px;
   color: #f6f6f6;
 }
 
@@ -307,7 +362,7 @@ main.container-fluid {
   padding-right: 0;
   color: #666;
   overflow-x: hidden;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
 }
 
 main.container-fluid h1 {
@@ -316,73 +371,24 @@ main.container-fluid h1 {
   font-weight: bold;
 }
 
-main.container-fluid #carousel {
-  width: 100%;
-  overflow: hidden;
-  background-color: #F3F3F3;
-  padding-bottom: 40px;
-  margin-bottom: 50px;
+main.container-fluid #circle-skills {
+  margin-top: 56px;
 }
 
-main.container-fluid #carousel h2 {
-  margin-top: 30px;
+main.container-fluid #circle-skills h2 {
   text-align: center;
-  color: #666;
-  padding-top: 60px;
-  padding-bottom: 20px;
-  font-size: 29px;
 }
 
-main.container-fluid #carousel .carousel {
-  margin-top: 70px;
-}
-
-main.container-fluid #carousel .carousel .center {
-  -webkit-transition: .2s;
-  -o-transition: .2s;
-  transition: .2s;
-  -webkit-transform: scale(1.06);
-      -ms-transform: scale(1.06);
-          transform: scale(1.06);
-}
-
-main.container-fluid #carousel .carousel div.item {
-  background-position: center center;
-  background-size: cover;
-  height: 400px;
-  -webkit-box-shadow: 0 0 20px 4px #000;
-          box-shadow: 0 0 20px 4px #000;
-  cursor: -webkit-grab;
-  cursor: grab;
-  border-radius: 4px;
-}
-
-main.container-fluid #carousel .carousel div.item:hover {
-  -webkit-box-shadow: 0 0 20px 4px #c96e4d;
-          box-shadow: 0 0 20px 4px #c96e4d;
-}
-
-main.container-fluid #carousel .carousel .owl-nav {
-  font-size: 40px;
-}
-
-main.container-fluid .circle-skills h2 {
-  text-align: center;
-  font-size: 42px;
-  font-weight: normal;
-  margin-bottom: 80px;
-}
-
-main.container-fluid .circle-skills .circle-container {
+main.container-fluid #circle-skills .circle-container {
   position: relative;
   text-align: center;
   padding-bottom: 60px;
 }
 
-main.container-fluid .circle-skills .circle-container span[class^="miic-"] {
+main.container-fluid #circle-skills .circle-container span[class^="miic-"] {
   position: absolute;
   line-height: 140px;
-  font-size: 60px;
+  font-size: 54px;
   top: 0;
   left: 0;
   right: 0;
@@ -390,47 +396,59 @@ main.container-fluid .circle-skills .circle-container span[class^="miic-"] {
   margin: auto;
 }
 
-main.container-fluid .circle-skills .circle-container .miic-html:before {
+main.container-fluid #circle-skills .circle-container .miic-html:before {
   content: /e902;
-  color: #914b30;
+  color: #aeaeae;
 }
 
-main.container-fluid .circle-skills .circle-container .miic-css:before {
+main.container-fluid #circle-skills .circle-container .miic-css:before {
   content: /e901;
-  color: #285f97;
+  color: #aeaeae;
 }
 
-main.container-fluid .circle-skills .circle-container .miic-js:before {
+main.container-fluid #circle-skills .circle-container .miic-js:before {
   content: /e903;
-  color: #ad954a;
+  color: #aeaeae;
 }
 
-main.container-fluid .circle-skills .circle-container .miic-bootstrap:before {
+main.container-fluid #circle-skills .circle-container .miic-bootstrap:before {
   content: /e900;
-  font-size: 58px;
+  font-size: 50px;
+  color: #aeaeae;
 }
 
-main.container-fluid .circle-skills .circle-container .miic-php:before {
+main.container-fluid #circle-skills .circle-container .miic-php:before {
   content: /e904;
-  color: #6f78a0;
+  color: #aeaeae;
+  font-size: 50px;
 }
 
-main.container-fluid .circle-skills .circle-container h4 {
+main.container-fluid #circle-skills .circle-container h4 {
   margin-top: 8px;
+  font-style: italic;
 }
 
-main.container-fluid .circle-skills .circle-container .percent {
+main.container-fluid #circle-skills .circle-container .percent {
+  font-family: caviar_dream, sans-serif;
   position: absolute;
   line-height: 140px;
-  top: 46px;
+  top: 47px;
   left: 0;
   right: 0;
   bottom: 0;
   margin: auto;
-  font-size: 18px;
+  font-size: 17px;
 }
 
-main.container-fluid .circle-skills .circle-container .progress-ring-circle {
+main.container-fluid #circle-skills .circle-container h4 + p {
+  margin-top: 15px;
+  font-family: "FiraSans", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+main.container-fluid #circle-skills .circle-container .progress-ring-circle {
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
           transform-origin: center;
@@ -443,8 +461,292 @@ main.container-fluid .circle-skills .circle-container .progress-ring-circle {
   transition: stroke-dasharray 1.8s;
 }
 
+.portfolio {
+  position: relative;
+  height: 680px;
+  background-image: url("../img/example_block.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #6c6c6c;
+  margin-bottom: 60px;
+}
+
+.portfolio .p_overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  opacity: .7;
+  z-index: 2;
+}
+
+.portfolio h2 {
+  margin-top: 15px;
+  position: relative;
+  z-index: 15;
+  text-align: center;
+  color: #35393d;
+}
+
+.portfolio .skills-underline {
+  margin-bottom: 45px;
+}
+
+.portfolio .example-work {
+  position: absolute;
+  width: 100%;
+  height: 660px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 20px;
+  z-index: 10;
+}
+
+.portfolio .example-work .image-text .image img {
+  max-width: 100%;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 50px 2px #000000;
+          box-shadow: 0 0 50px 2px #000000;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .3s, -webkit-box-shadow .3s;
+  transition: -webkit-transform .3s, -webkit-box-shadow .3s;
+  -o-transition: transform .3s, box-shadow .3s;
+  transition: transform .3s, box-shadow .3s;
+  transition: transform .3s, box-shadow .3s, -webkit-transform .3s, -webkit-box-shadow .3s;
+}
+
+.portfolio .example-work .image-text .image img:hover {
+  -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-box-shadow: 0 0 50px 6px #000000;
+          box-shadow: 0 0 50px 6px #000000;
+}
+
+.portfolio .example-work .image-text .text {
+  color: rgba(42, 42, 42, 0.86);
+  text-align: center;
+}
+
+.portfolio .example-work .image-text .text h3 {
+  margin-bottom: 25px;
+}
+
+.portfolio .example-work .image-text .text p {
+  font-weight: 300;
+  display: block;
+  margin: auto;
+  width: 70%;
+}
+
+.portfolio .example-work .image-text .text .button {
+  margin-top: 32px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #7c6165;
+  width: 160px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 50px;
+  text-transform: capitalize;
+  text-align: center;
+  position: relative;
+  outline: none;
+  -webkit-transition: background-color .1s ease;
+  -o-transition: background-color .1s ease;
+  transition: background-color .1s ease;
+  cursor: pointer;
+}
+
+.portfolio .example-work .image-text .text .button:focus, .portfolio .example-work .image-text .text .button:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.portfolio .example-work .image-text .text .button:hover {
+  background-color: #ff4747;
+}
+
+.portfolio .example-work .image-text .text .button:active {
+  background-color: #ff1414;
+}
+
+.portfolio .example-work .image-text .text .button .fa-arrow-left {
+  margin-right: 8px;
+}
+
+.contact .contact-form h2 {
+  text-align: center;
+}
+
+.contact .contact-form hr {
+  margin-bottom: 30px;
+}
+
+.contact .contact-form p {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 55px;
+}
+
+.contact .contact-form .row {
+  margin-top: 40px;
+}
+
+.contact .contact-form .row .text {
+  margin-top: -6.5px;
+}
+
+.contact .contact-form .row div[class^="col"] {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.contact .contact-form .row div[class^="col"] label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .contact-form .row div[class^="col"] .fas {
+  padding-top: 14px;
+  width: 43px;
+  background-color: #666;
+  border: 0;
+  position: relative;
+  border-top-left-radius: 10px;
+}
+
+.contact .contact-form .row div[class^="col"]:focus .fas {
+  background-color: #aaa;
+}
+
+.contact .contact-form .row div[class^="col"] input {
+  outline: 0;
+  color: #666;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+.contact .contact-form .row div[class^="col"] input::-webkit-input-placeholder {
+  color: #a8a8a8;
+}
+
+.contact .contact-form .row div[class^="col"] input::-moz-placeholder {
+  color: #a8a8a8;
+}
+
+.contact .contact-form .row div[class^="col"] input:-ms-input-placeholder {
+  color: #a8a8a8;
+}
+
+.contact .contact-form .row div[class^="col"] input::-ms-input-placeholder {
+  color: #a8a8a8;
+}
+
+.contact .contact-form .row div[class^="col"] input::placeholder {
+  color: #a8a8a8;
+}
+
+.contact .contact-form .row div[class^="col"] input[name="Name"] {
+  border-top: 1px solid #b3b3b3;
+  border-right: 1px solid #b3b3b3;
+  border-bottom: 1px solid #b3b3b3;
+  border-left: 0;
+  padding: 9px 20px;
+  width: calc(100% - 43px);
+}
+
+.contact .contact-form .row div[class^="col"] input[name="Email"] {
+  padding: 8px 20px;
+  width: calc(100% - 43px);
+  border-top: 1px solid #b3b3b3;
+  border-right: 1px solid #b3b3b3;
+  border-bottom: 1px solid #b3b3b3;
+  border-left: 0;
+}
+
+.contact .contact-form .row div[class^="col"] input[name="Subject"] {
+  padding: 8px 20px;
+  width: calc(100% - 43px);
+  border-top: 1px solid #b3b3b3;
+  border-right: 1px solid #b3b3b3;
+  border-bottom: 1px solid #b3b3b3;
+  border-left: 0;
+}
+
+.contact .contact-form .row div[class^="col"] #Message {
+  padding: 8px 20px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #b3b3b3;
+  color: #666;
+}
+
+.contact .contact-form .row div[class^="col"] #Message::-webkit-input-placeholder {
+  color: #a8a8a8;
+}
+
+.contact .contact-form .row div[class^="col"] #Message::-moz-placeholder {
+  color: #a8a8a8;
+}
+
+.contact .contact-form .row div[class^="col"] #Message:-ms-input-placeholder {
+  color: #a8a8a8;
+}
+
+.contact .contact-form .row div[class^="col"] #Message::-ms-input-placeholder {
+  color: #a8a8a8;
+}
+
+.contact .contact-form .row div[class^="col"] #Message::placeholder {
+  color: #a8a8a8;
+}
+
+.contact .contact-form .button {
+  margin-top: 16px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 5px;
+  color: #000;
+  background-color: #F3F3F3;
+  width: 150px;
+  height: 40px;
+  font-size: 18px;
+  text-transform: capitalize;
+  text-align: center;
+  position: relative;
+  outline: none;
+  -webkit-transition: background-color .1s ease;
+  -o-transition: background-color .1s ease;
+  transition: background-color .1s ease;
+  border: 2px solid #666;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.contact .contact-form .button:hover {
+  background-color: #666;
+  color: #ffffff;
+}
+
+.contact .contact-form .button:active {
+  background-color: #c96e4d;
+}
+
 #footer {
-  background: #222;
+  background: #222222;
   text-align: center;
   padding: 40px 0;
   color: #FFF;
@@ -453,8 +755,8 @@ main.container-fluid .circle-skills .circle-container .progress-ring-circle {
 #footer span {
   -webkit-animation-name: H-pulse;
           animation-name: H-pulse;
-  -webkit-animation-duration: 1.2s;
-          animation-duration: 1.2s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in;
@@ -493,6 +795,10 @@ main.container-fluid .circle-skills .circle-container .progress-ring-circle {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+}
+
+#footer p {
+  font-family: "caviar_dreams", sans-serif;
 }
 
 .copyright {

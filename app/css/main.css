@@ -575,6 +575,14 @@ main.container-fluid #circle-skills .circle-container .progress-ring-circle {
   background-color: #ff4747;
 }
 
+.portfolio .example-work .image-text .text .button:hover .example-work {
+  -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-box-shadow: 0 0 50px 6px #000000;
+          box-shadow: 0 0 50px 6px #000000;
+}
+
 .portfolio .example-work .image-text .text .button:active {
   background-color: #ff1414;
 }

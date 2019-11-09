@@ -117,6 +117,20 @@ $(document).ready(function () {
         }
     });
 
+//buttonHover
+
+    const watchButton = document.querySelector('.text .button');
+    const exampleWork = document.querySelector('.example-work .image img');
+
+    watchButton.addEventListener('mouseover', () => {
+        exampleWork.style.boxShadow = '0 0 50px 6px #000000';
+        exampleWork.style.transform = 'scale(1.03)';
+    });
+
+    watchButton.addEventListener('mouseout', () => {
+        exampleWork.style.boxShadow = null;
+        exampleWork.style.transform = null;
+    });
 
 //particleJS plugin
     particlesJS("particles-js", {

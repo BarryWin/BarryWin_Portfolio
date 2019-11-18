@@ -242,12 +242,24 @@ header .header-content h1 {
   color: #232323;
 }
 
+@media screen and (max-width: 576px) {
+  header .header-content h1 {
+    font-size: 45px;
+  }
+}
+
 header .header-content h3 {
   text-align: center;
   line-height: 1.5;
   font-size: 20px;
   margin-top: 20px;
   color: #d9dbdf;
+}
+
+@media screen and (max-width: 576px) {
+  header .header-content h3 {
+    font-size: 18px;
+  }
 }
 
 header nav {

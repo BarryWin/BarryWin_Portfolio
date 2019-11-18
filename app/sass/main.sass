@@ -31,11 +31,14 @@ h2
     bottom: 70px
     top: 17px
 header
+  display: flex
+
+  justify-content: center
+  align-items: center
   width: 100%
   height: 100%
   overflow: hidden
   transition: background-color .5s
-  padding-top: 10%
   z-index: 1
   background-image: url("../img/main-img.png")
   background-size: cover
@@ -71,7 +74,10 @@ header
       border-right: 39px solid transparent
     a
       text-decoration: none
+
     .container
+      position: relative
+      display: flex
       .fa-stack
         font-size: 1.22em
         &:active
@@ -83,6 +89,21 @@ header
           font-size: 1.1em
           &:hover
             color: $accent
+      a
+        @media screen and (max-width: 768px)
+          display: none
+    .logo
+      z-index: 1000
+      width: 50px
+      height: 50px
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      top: 20px
+      margin: auto
+
+
 
   #particles-js
     position: absolute
@@ -91,15 +112,31 @@ header
     top: 0
     left: 0
     z-index: 5
-  .text
+  .header-content
     position: relative
     z-index: 6
+    margin-bottom: 40px
+    .me-image
+      position: relative
+      overflow: hidden
+      border-radius: 50%
+      width: 120px
+      height: 117px
+      margin: auto
+      box-shadow: 0 2px 25px 4px #666
+    .me-image__img
+      position: absolute
+      left: 50%
+      display: block
+      margin: auto
+      border-radius: 50%
+      filter: brightness(.7)
+      transform: translateX(-50%)
     h1
       text-align: center
       margin:
        left: auto
        right: auto
-       top: 130px
       font-weight: bold
       font-size: 53px
       color: #232323

@@ -113,7 +113,7 @@ $(document).ready(function () {
             setProgress(80, 'css');
             setProgress(70, 'js');
             setProgress(60, 'boot');
-            setProgress(30,'php')
+            setProgress(30, 'php')
         }
     });
 
@@ -206,7 +206,7 @@ $(document).ready(function () {
             "detect_on": "canvas",
             "events": {
                 "onhover": {
-                    "enable": true,
+                    "enable": false,
                     "mode": "repulse"
                 },
                 "onclick": {

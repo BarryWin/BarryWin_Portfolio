@@ -429,8 +429,9 @@ header a.arrow h1.demonstration {
 main.container-fluid {
   padding-left: 0;
   padding-right: 0;
+  padding-top: 56px;
+  padding-bottom: 50px;
   color: #666;
-  overflow-x: hidden;
   background-color: #f3f3f3;
 }
 
@@ -438,10 +439,6 @@ main.container-fluid h1 {
   text-align: center;
   font-size: 50px;
   font-weight: bold;
-}
-
-main.container-fluid #circle-skills {
-  margin-top: 56px;
 }
 
 main.container-fluid #circle-skills h2 {
@@ -452,6 +449,12 @@ main.container-fluid #circle-skills .circle-container {
   position: relative;
   text-align: center;
   padding-bottom: 60px;
+}
+
+@media screen and (max-width: 767px) {
+  main.container-fluid #circle-skills .circle-container {
+    padding-bottom: 20px;
+  }
 }
 
 main.container-fluid #circle-skills .circle-container span[class^="miic-"] {
@@ -497,6 +500,12 @@ main.container-fluid #circle-skills .circle-container h4 {
   font-style: italic;
 }
 
+@media screen and (max-width: 767px) {
+  main.container-fluid #circle-skills .circle-container h4 {
+    font-size: 21px;
+  }
+}
+
 main.container-fluid #circle-skills .circle-container .percent {
   font-family: caviar_dream, sans-serif;
   position: absolute;
@@ -517,6 +526,12 @@ main.container-fluid #circle-skills .circle-container h4 + p {
   font-size: 15px;
 }
 
+@media screen and (max-width: 767px) {
+  main.container-fluid #circle-skills .circle-container h4 + p {
+    font-size: 14px;
+  }
+}
+
 main.container-fluid #circle-skills .circle-container .progress-ring-circle {
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
@@ -532,7 +547,6 @@ main.container-fluid #circle-skills .circle-container .progress-ring-circle {
 
 .portfolio {
   position: relative;
-  height: 680px;
   background-image: url("../img/example_block.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -564,9 +578,10 @@ main.container-fluid #circle-skills .circle-container .progress-ring-circle {
 }
 
 .portfolio .example-work {
-  position: absolute;
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 25px;
   width: 100%;
-  height: 660px;
   top: 0;
   left: 0;
   right: 0;
@@ -574,6 +589,10 @@ main.container-fluid #circle-skills .circle-container .progress-ring-circle {
   margin: auto;
   border-radius: 20px;
   z-index: 10;
+}
+
+.portfolio .example-work .image-text .image {
+  margin-bottom: 20px;
 }
 
 .portfolio .example-work .image-text .image img {
@@ -791,7 +810,6 @@ main.container-fluid #circle-skills .circle-container .progress-ring-circle {
 
 .contact .contact-form .button {
   margin-top: 16px;
-  margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -805,21 +823,25 @@ main.container-fluid #circle-skills .circle-container .progress-ring-circle {
   text-align: center;
   position: relative;
   outline: none;
-  -webkit-transition: background-color .1s ease;
-  -o-transition: background-color .1s ease;
-  transition: background-color .1s ease;
+  -webkit-transition: -webkit-box-shadow .1s ease;
+  transition: -webkit-box-shadow .1s ease;
+  -o-transition: box-shadow .1s ease;
+  transition: box-shadow .1s ease;
+  transition: box-shadow .1s ease, -webkit-box-shadow .1s ease;
   border: 2px solid #666;
   font-weight: 300;
   cursor: pointer;
 }
 
 .contact .contact-form .button:hover {
-  background-color: #666;
-  color: #ffffff;
+  -webkit-box-shadow: 0 1px 30px 0 #888;
+          box-shadow: 0 1px 30px 0 #888;
 }
 
 .contact .contact-form .button:active {
-  background-color: #c96e4d;
+  -webkit-transform: translateY(2px) scale(0.99);
+      -ms-transform: translateY(2px) scale(0.99);
+          transform: translateY(2px) scale(0.99);
 }
 
 #footer {

@@ -592,15 +592,14 @@ main.container-fluid #circle-skills .circle-container .progress-ring-circle {
 }
 
 .portfolio .example-work .image-text .image {
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
-.portfolio .example-work .image-text .image img {
-  max-width: 100%;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 0 50px 2px #000000;
-          box-shadow: 0 0 50px 2px #000000;
-  cursor: pointer;
+.portfolio .example-work .image-text .image .image-container {
+  display: block;
+  position: relative;
+  -webkit-box-shadow: 0 0 50px 2px #000;
+          box-shadow: 0 0 50px 2px #000;
   -webkit-transition: -webkit-transform .3s, -webkit-box-shadow .3s;
   transition: -webkit-transform .3s, -webkit-box-shadow .3s;
   -o-transition: transform .3s, box-shadow .3s;
@@ -608,12 +607,43 @@ main.container-fluid #circle-skills .circle-container .progress-ring-circle {
   transition: transform .3s, box-shadow .3s, -webkit-transform .3s, -webkit-box-shadow .3s;
 }
 
-.portfolio .example-work .image-text .image img:hover {
+.portfolio .example-work .image-text .image .image-container:hover {
   -webkit-transform: scale(1.03);
       -ms-transform: scale(1.03);
           transform: scale(1.03);
   -webkit-box-shadow: 0 0 50px 6px #000000;
           box-shadow: 0 0 50px 6px #000000;
+}
+
+.portfolio .example-work .image-text .image .image-container:hover .image-overlay {
+  background-color: transparent;
+}
+
+.portfolio .example-work .image-text .image img {
+  position: relative;
+  max-height: 280px;
+  width: 445px;
+  border-radius: 4px;
+  border: 4px solid #FFF;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .portfolio .example-work .image-text .image img {
+    width: 100%;
+  }
+}
+
+.portfolio .example-work .image-text .image .image-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(102, 102, 102, 0.2);
+  -webkit-transition: background-color .3s;
+  -o-transition: background-color .3s;
+  transition: background-color .3s;
 }
 
 .portfolio .example-work .image-text .text {
@@ -629,7 +659,7 @@ main.container-fluid #circle-skills .circle-container .progress-ring-circle {
   font-weight: 300;
   display: block;
   margin: auto;
-  width: 70%;
+  width: 95%;
 }
 
 .portfolio .example-work .image-text .text .button {

@@ -120,7 +120,7 @@ $(document).ready(function () {
 //buttonHover
 
 	const watchButton = document.querySelector('.text .button');
-	const exampleWork = document.querySelector('.example-work .image img');
+	const exampleWork = document.querySelector('.image-container');
 
 	watchButton.addEventListener('mouseover', () => {
 		exampleWork.style.boxShadow = '0 0 50px 6px #000000';

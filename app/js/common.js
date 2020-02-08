@@ -121,15 +121,18 @@ $(document).ready(function () {
 
 	const watchButton = document.querySelector('.text .button');
 	const exampleWork = document.querySelector('.image-container');
+	const imageOverlay = document.querySelector('.image-overlay');
 
 	watchButton.addEventListener('mouseover', () => {
 		exampleWork.style.boxShadow = '0 0 50px 6px #000000';
 		exampleWork.style.transform = 'scale(1.03)';
+		imageOverlay.style.backgroundColor = 'transparent';
+
 	});
 
 	watchButton.addEventListener('mouseout', () => {
-		exampleWork.style.boxShadow = null;
-		exampleWork.style.transform = null;
+		exampleWork.removeAttribute("style");
+		imageOverlay.removeAttribute("style");
 	});
 
 //particleJS plugin

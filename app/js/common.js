@@ -120,20 +120,27 @@ $(document).ready(function () {
 //buttonHover
 
 	const watchButton = document.querySelector('.text .button');
-	const exampleWork = document.querySelector('.image-container');
-	const imageOverlay = document.querySelector('.image-overlay');
 
-	watchButton.addEventListener('mouseover', () => {
-		exampleWork.style.boxShadow = '0 0 50px 6px #000000';
-		exampleWork.style.transform = 'scale(1.03)';
-		imageOverlay.style.backgroundColor = 'transparent';
+	const exampleWork = document.querySelectorAll('.image-container');
+	const imageOverlay = document.querySelectorAll('.image-overlay');
+
+	watchButton.addEventListener('mouseenter', function() {
+
+		let randomWork = Math.floor(Math.random() * exampleWork.length);
+
+		watchButton.href = exampleWork[randomWork].href;
+
+		exampleWork[randomWork].style.boxShadow = '0 0 50px 6px #000000';
+		exampleWork[randomWork].style.transform = 'scale(1.03)';
+		imageOverlay[randomWork].style.backgroundColor = 'transparent';
+
+		this.addEventListener('mouseleave', () => {
+			exampleWork[randomWork].removeAttribute("style");
+			imageOverlay[randomWork].removeAttribute("style");
+		});
 
 	});
 
-	watchButton.addEventListener('mouseout', () => {
-		exampleWork.removeAttribute("style");
-		imageOverlay.removeAttribute("style");
-	});
 
 //particleJS plugin
 	particlesJS("particles-js", {
